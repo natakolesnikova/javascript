@@ -1,0 +1,44 @@
+[
+    {
+      "_id": "5b0c1f8dd5d789689e50d07c",
+      "name": "Wendy Shields",
+      "gender": "female",
+      "company": "BUZZMAKER",
+      "email": "wendyshields@buzzmaker.com"
+    },
+    {
+      "_id": "5b0c1f8dca271f314c12b45e",
+      "name": "Betsy Gibbs",
+      "gender": "female",
+      "company": "KONGLE",
+      "email": "betsygibbs@kongle.com"
+    },
+    {
+      "_id": "5b0c1f8d873f7bc87a0ca4ec",
+      "name": "Beach Soto",
+      "gender": "male",
+      "company": "LUNCHPOD",
+      "email": "beachsoto@lunchpod.com"
+    },
+    {
+      "_id": "5b0c1f8d4031586d8cd36472",
+      "name": "Geneva Clayton",
+      "gender": "female",
+      "company": "KIGGLE",
+      "email": "genevaclayton@kiggle.com"
+    },
+    {
+      "_id": "5b0c1f8d8e730f6354be6138",
+      "name": "Cherie Greene",
+      "gender": "female",
+      "company": "COLLAIRE",
+      "email": "cheriegreene@collaire.com"
+    },
+    {
+      "_id": "5b0c1f8dfb2ba2979cb0c977",
+      "name": "Moreno Phillips",
+      "gender": "male",
+      "company": "SUPPORTAL",
+      "email": "morenophillips@supportal.com"
+    }
+  ]
