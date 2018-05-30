@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 6</title>
+    <style>
+        .textarea {
+            margin: 10px 10px 10px 10px;
+        }
+        .select {
+            margin: 10px 10px 10px 10px;
+        }
+        .input {
+            margin: 10px 10px 10px 10px;
+        }
+        .btn {
+            margin: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body> 
+    <div id="input">
+        <input id="sometext" type="text" placeholder="Hello" name="sometext">
+    </div>
+    <div id="textarea">
+        <textarea id="fieldForText" name="fieldForText"></textarea>
+    </div>
+    <div id="select">
+        <select id="sel" name="sel">
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+        </select>
+    </div>
+    <div>
+        <button id="btn" name="btn">Send request</button>
+    </div>
+    <div id='loader' style='display: none;'>
+            <img src='25.gif' width='60px' height='60px'>
+          </div>
+    <script
+  src="http://code.jquery.com/jquery-1.11.1.js">
+  </script>
+  <script>
+      
+      $('#btn').on('click', function() {
+          var inputSomeText = $('#sometext').val();
+        //  console.log(inputSomeText);
+          inputSomeText = JSON.stringify(inputSomeText);
+        //  console.log(inputSomeText);
+          var fieldForText = $('#fieldForText').val();
+         // fieldForText = JSON.stringify(fieldForText);
+          var sel = $('#sel').val();
+        //  sel = JSON.stringify(sel);
+          var btn = $('#btn').val();
+        //  btn = JSON.stringify(btn);
+       //   console.log(inputSomeText);
+       //   console.log(fieldForText);
+       //   console.log(sel);
+       //   console.log(btn);
+          $.ajax({
+              type: "POST",
+              url: "http://droidec.com/form.php",
+              cache: false,
+              dataType: 'json', 
+              data: {"key":"1"}, 
+              contentType: false,
+              processData: false,
+              beforeSend: function() {
+                $('#loader').show();
+               // output.text('ergerg'); 
+              },
+              success: function(respond) {
+                // Делаем что-то если все прошло успешно
+                if (typeof respond.error === 'undefined') {
+                        console.log('===',respond);
+                        $('#loader').hide();
+                } else {
+                    console.log(respond.error);
+                    $('#loader').hide();
+                }
+
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                
+              }
+          })
+      })
+  </script>
+</body>
+</html>
