@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 3</title>
+</head>
+<body>
+    
+    <script>
+            var head = {
+            glasses: 1
+            };
+
+            var table = {
+            pen: 3
+            };
+
+            var bed = {
+            sheet: 1,
+            pillow: 2
+            };
+
+            var pockets = {
+            money: 2000
+            };
+
+            pockets.__proto__ = bed;
+            bed.__proto__ = table;
+            table.__proto__ = head;
+            console.log(table.money);
+            // pockets -> bed -> table -> head
+            // То есть pockets.pen == 3, bed.glasses == 1,
+            // но table.money == undefined
+        </script>
+
+        <script>
+            var promise = new Promise(function(resolve, reject) {
+                
+            })
+
+            let urls = [
+                'user.json',
+                'quest.json'
+            ];
+        </script>
+</body>
+</html>
